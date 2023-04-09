@@ -201,6 +201,7 @@ contract FF721MetaProxy is Ownable, Pausable {
         emit OwnershipTransferred(_owner, newOwner);
     }
 
+
     function renounceOwnership() public override onlyOwner {
 
         require(_ownerCanTransfer, "Transfer to account(0) prohibited");
@@ -210,6 +211,7 @@ contract FF721MetaProxy is Ownable, Pausable {
 
         emit OwnershipTransferred(previousOwner, address(0));
     }
+
 
     function burn() external payable {
 
