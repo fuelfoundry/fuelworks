@@ -64,7 +64,6 @@ contract FF721MetaProxy is Ownable, Pausable {
     event OwnerTransferabilityChanged(address indexed guardian, bool canTransfer);
     event GuardianTransferabilityChanged(address indexed owner, bool canTransfer);
 
-
     modifier onlyGuardian() {
 
         require(msg.sender == _guardian, "Only guardian may call this function");
